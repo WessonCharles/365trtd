@@ -1,0 +1,20 @@
+{
+  "name": "365trtd",
+  "version": "0.0.0",
+  "authors": [
+    "changhuiqiang <huiqiang5136@163.com>"
+  ],
+  "main": "app",
+  "license": "MIT",
+  "appPath": "app",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
