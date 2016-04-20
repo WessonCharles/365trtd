@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8" />
+        <title>画盘</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="styles/components.min.css" rel="stylesheet" type="text/css" />
+        <link href="styles/login.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="shortcut icon" href="favicon.ico" />
+    </head>
+        <script src="libs/jquery/dist/jquery.min.js"></script>
+        <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="scripts/plugin-extends.js"></script>
+    <body>
+        <div class="page-header">
+            <div class="top-menu">
+                <div class="dropdown dropdown-user">
+                    <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                        <img alt="" class="img-circle" src="../assets/layouts/layout/img/avatar3_small.jpg">
+                        <span class="username username-hide-on-mobile"> Nick </span>
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-default dropdown-right">
+                                <li>
+                                    <a href="page_user_profile_1.html">
+                                        <i class="icon-user"></i> My Profile </a>
+                                </li>
+                                <li>
+                                    <a href="app_calendar.html">
+                                        <i class="icon-calendar"></i> My Calendar </a>
+                                </li>
+                                <li>
+                                    <a href="app_inbox.html">
+                                        <i class="icon-envelope-open"></i> My Inbox
+                                        <span class="badge badge-danger"> 3 </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="app_todo.html">
+                                        <i class="icon-rocket"></i> My Tasks
+                                        <span class="badge badge-success"> 7 </span>
+                                    </a>
+                                </li>
+                                <li class="divider"> </li>
+                                <li>
+                                    <a href="page_user_lock_1.html">
+                                        <i class="icon-lock"></i> Lock Screen </a>
+                                </li>
+                                <li>
+                                    <a href="page_user_login_1.html">
+                                        <i class="icon-key"></i> Log Out </a>
+                                </li>
+                    </ul>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control input-circle-left" placeholder="search"> 
+                    <span class="input-group-addon input-circle-right">
+                        <i class="fa fa-search"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="page-logo">
+                <h1>圆转天地</h1>
+            </div>
+            <div class="nav nav-bar center-menu">
+                <ul>
+                    <li class="selected"><a href="">首页</a></li>
+                    <li><a href="">推荐</a></li>
+                    <li><a href="">工具</a></li>
+                    <li><a href="">活动</a></li>
+                    <li><a href="">意见反馈</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <div class="page-sidebar">
+                    <div class="portlet">
+                        <h4>显示</h4>
+                        <div class="btn-group" data-toggle="ws-tab">
+                            <label class="btn btn-default active">
+                                <input type="radio" class="toggle"> 天盘 </label>
+                            <label class="btn btn-default">
+                                <input type="radio" class="toggle"> 地盘 </label>
+                            <label class="btn btn-default">
+                                <input type="radio" class="toggle"> 全部 </label>
+                        </div>
+                    </div>
+                    <div class="portlet">
+                        <h4>排序</h4>
+                        <div class="btn-group" data-toggle="ws-tab">
+                            <label class="btn btn-default active">
+                                <input type="radio" class="toggle"> 更新时间 <i class="fa fa-angle-down"></i></label>
+                            <label class="btn btn-default">
+                                <input type="radio" class="toggle"> 创建时间 <i class="fa fa-angle-down"></i></label>
+                            <label class="btn btn-default">
+                                <input type="radio" class="toggle"> 名称 <i class="fa fa-angle-down"></i></label>
+                        </div>
+                    </div>
+                    <div class="portlet">
+                        <div class="btn-group" data-toggle="ws-tab">
+                            <label class="btn btn-default active">
+                                <input type="radio" class="toggle">  已收藏 </label>
+                            <label class="btn btn-default">
+                                <input type="radio" class="toggle"> 未收藏 </label>
+                            <label class="btn btn-default">
+                                <input type="radio" class="toggle"> 全部 </label>
+                        </div>
+                    </div>
+                    <div class="portlet">
+                        <h4>标签</h4>
+                        <div class="tags">
+                            <label>全部</label><label>啊啊啊</label><label>不不不</label><label>啛啛喳喳</label>
+                            <label>粉色的</label><label>谁说的</label><label>宝宝</label><label>对对对</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <div id="top-carousel" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#top-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#top-carousel" data-slide-to="1"></li>
+                        <li data-target="#top-carousel" data-slide-to="2"></li>
+                      </ol>
+
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                          <img style="width:100%;height:135px;" src="images/first.svg" alt="...">
+                          <div class="carousel-caption">
+                            ...
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img style="width:100%;height:135px;" src="images/first.svg" alt="...">
+                          <div class="carousel-caption">
+                            ...
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img style="width:100%;height:135px;" src="images/thrid.svg" alt="...">
+                          <div class="carousel-caption">
+                            ...
+                          </div>
+                        </div>
+                      </div>
+
+                      <a class="left carousel-control" href="#top-carousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#top-carousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+
+                    <div class="bigtab tabbable-line" id="bigtab">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#tab1" data-toggle="tab"> 浏览 </a>
+                            </li>
+                            <li>
+                                <a href="#tab2" data-toggle="tab"> 专题 </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                               <div class="col-xs-12">
+                                   <div class="col-xs-3">
+                                       <div class="thumbnail">
+                                            <div class="clone"><i class="fa fa-copy"></i></div>
+                                            <div class="delete"><i class="fa fa-trash"></i></div>
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTgiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMTk4IiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijk5IiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNhYWE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTNweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTh4MjAwPC90ZXh0Pjwvc3ZnPg==" alt="100%x200" style="width: 100%; height: 200px; display: block;" data-src="../assets/global/plugins/holder.js/100%x200">
+                                            <div class="caption">
+                                                <h5>Thumbnail label
+                                                    <i class="fa fa-info-circle"></i>
+                                                    <i class="fa fa-tag"></i>
+                                                </h3>
+                                                <p> 作者：<b>Wesson Charles</b> </p>
+                                                <div class="thumbfoot">
+                                                    <ul>
+                                                        <li><i class="fa fa-eye"></i><span>350</span></li>
+                                                        <li><i class="fa fa-star-o"></i><span>20</span></li>
+                                                        <li><i class="fa fa-comment-o"></i><span>15</span></li>
+                                                        <li><i class="fa fa-thumbs-o-up"></i><span>521</span></li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+
+                                   <div class="col-xs-3">
+                                       <div class="thumbnail">
+                                            <div class="clone"><i class="fa fa-copy"></i></div>
+                                            <div class="delete"><i class="fa fa-trash"></i></div>
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTgiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMTk4IiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijk5IiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNhYWE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTNweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTh4MjAwPC90ZXh0Pjwvc3ZnPg==" alt="100%x200" style="width: 100%; height: 200px; display: block;" data-src="../assets/global/plugins/holder.js/100%x200">
+                                            <div class="caption">
+                                                <h5>Thumbnail label
+                                                    <i class="fa fa-info-circle"></i>
+                                                    <i class="fa fa-tag"></i>
+                                                </h5>
+                                                <p> 作者：<b>Wesson Charles</b> </p>
+                                                <div class="thumbfoot">
+                                                    <ul>
+                                                        <li><i class="fa fa-eye"></i><span>350</span></li>
+                                                        <li><i class="fa fa-star-o"></i><span>20</span></li>
+                                                        <li><i class="fa fa-comment-o"></i><span>15</span></li>
+                                                        <li><i class="fa fa-thumbs-o-up"></i><span>521</span></li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div><div class="col-xs-3">
+                                       <div class="thumbnail">
+                                            <div class="clone"><i class="fa fa-copy"></i></div>
+                                            <div class="delete"><i class="fa fa-trash"></i></div>
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTgiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMTk4IiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijk5IiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNhYWE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTNweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTh4MjAwPC90ZXh0Pjwvc3ZnPg==" alt="100%x200" style="width: 100%; height: 200px; display: block;" data-src="../assets/global/plugins/holder.js/100%x200">
+                                            <div class="caption">
+                                                <h5>Thumbnail label
+                                                    <i class="fa fa-info-circle"></i>
+                                                    <i class="fa fa-tag"></i>
+                                                </h3>
+                                                <p> 作者：<b>Wesson Charles</b> </p>
+                                                <div class="thumbfoot">
+                                                    <ul>
+                                                        <li><i class="fa fa-eye"></i><span>350</span></li>
+                                                        <li><i class="fa fa-star-o"></i><span>20</span></li>
+                                                        <li><i class="fa fa-comment-o"></i><span>15</span></li>
+                                                        <li><i class="fa fa-thumbs-o-up"></i><span>521</span></li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div><div class="col-xs-3">
+                                       <div class="thumbnail">
+                                            <div class="clone"><i class="fa fa-copy"></i></div>
+                                            <div class="delete"><i class="fa fa-trash"></i></div>
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTgiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMTk4IiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijk5IiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNhYWE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTNweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTh4MjAwPC90ZXh0Pjwvc3ZnPg==" alt="100%x200" style="width: 100%; height: 200px; display: block;" data-src="../assets/global/plugins/holder.js/100%x200">
+                                            <div class="caption">
+                                                <h5>Thumbnail label
+                                                    <i class="fa fa-info-circle"></i>
+                                                    <i class="fa fa-tag"></i>
+                                                </h3>
+                                                <p> 作者：<b>Wesson Charles</b> </p>
+                                                <div class="thumbfoot">
+                                                    <ul>
+                                                        <li><i class="fa fa-eye"></i><span>350</span></li>
+                                                        <li><i class="fa fa-star-o"></i><span>20</span></li>
+                                                        <li><i class="fa fa-comment-o"></i><span>15</span></li>
+                                                        <li><i class="fa fa-thumbs-o-up"></i><span>521</span></li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div><div class="col-xs-3">
+                                       <div class="thumbnail">
+                                            <div class="clone"><i class="fa fa-copy"></i></div>
+                                            <div class="delete"><i class="fa fa-trash"></i></div>
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTgiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMTk4IiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijk5IiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNhYWE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTNweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTh4MjAwPC90ZXh0Pjwvc3ZnPg==" alt="100%x200" style="width: 100%; height: 200px; display: block;" data-src="../assets/global/plugins/holder.js/100%x200">
+                                            <div class="caption">
+                                                <h5>Thumbnail label
+                                                    <i class="fa fa-info-circle"></i>
+                                                    <i class="fa fa-tag"></i>
+                                                </h3>
+                                                <p> 作者：<b>Wesson Charles</b> </p>
+                                                <div class="thumbfoot">
+                                                    <ul>
+                                                        <li><i class="fa fa-eye"></i><span>350</span></li>
+                                                        <li><i class="fa fa-star-o"></i><span>20</span></li>
+                                                        <li><i class="fa fa-comment-o"></i><span>15</span></li>
+                                                        <li><i class="fa fa-thumbs-o-up"></i><span>521</span></li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div><div class="col-xs-3">
+                                       <div class="thumbnail">
+                                            <div class="clone"><i class="fa fa-copy"></i></div>
+                                            <div class="delete"><i class="fa fa-trash"></i></div>
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTgiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMTk4IiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijk5IiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNhYWE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTNweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTh4MjAwPC90ZXh0Pjwvc3ZnPg==" alt="100%x200" style="width: 100%; height: 200px; display: block;" data-src="../assets/global/plugins/holder.js/100%x200">
+                                            <div class="caption">
+                                                <h5>Thumbnail label
+                                                    <i class="fa fa-info-circle"></i>
+                                                    <i class="fa fa-tag"></i>
+                                                </h3>
+                                                <p> 作者：<b>Wesson Charles</b> </p>
+                                                <div class="thumbfoot">
+                                                    <ul>
+                                                        <li><i class="fa fa-eye"></i><span>350</span></li>
+                                                        <li><i class="fa fa-star-o"></i><span>20</span></li>
+                                                        <li><i class="fa fa-comment-o"></i><span>15</span></li>
+                                                        <li><i class="fa fa-thumbs-o-up"></i><span>521</span></li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div><div class="col-xs-3">
+                                       <div class="thumbnail">
+                                            <div class="clone"><i class="fa fa-copy"></i></div>
+                                            <div class="delete"><i class="fa fa-trash"></i></div>
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTgiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMTk4IiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijk5IiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNhYWE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTNweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTh4MjAwPC90ZXh0Pjwvc3ZnPg==" alt="100%x200" style="width: 100%; height: 200px; display: block;" data-src="../assets/global/plugins/holder.js/100%x200">
+                                            <div class="caption">
+                                                <h5>Thumbnail label
+                                                    <i class="fa fa-info-circle"></i>
+                                                    <i class="fa fa-tag"></i>
+                                                </h3>
+                                                <p> 作者：<b>Wesson Charles</b> </p>
+                                                <div class="thumbfoot">
+                                                    <ul>
+                                                        <li><i class="fa fa-eye"></i><span>350</span></li>
+                                                        <li><i class="fa fa-star-o"></i><span>20</span></li>
+                                                        <li><i class="fa fa-comment-o"></i><span>15</span></li>
+                                                        <li><i class="fa fa-thumbs-o-up"></i><span>521</span></li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div><div class="col-xs-3">
+                                       <div class="thumbnail">
+                                            <div class="clone"><i class="fa fa-copy"></i></div>
+                                            <div class="delete"><i class="fa fa-trash"></i></div>
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTgiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMTk4IiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijk5IiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNhYWE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTNweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTh4MjAwPC90ZXh0Pjwvc3ZnPg==" alt="100%x200" style="width: 100%; height: 200px; display: block;" data-src="../assets/global/plugins/holder.js/100%x200">
+                                            <div class="caption">
+                                                <h5>Thumbnail label
+                                                    <i class="fa fa-info-circle"></i>
+                                                    <i class="fa fa-tag"></i>
+                                                </h3>
+                                                <p> 作者：<b>Wesson Charles</b> </p>
+                                                <div class="thumbfoot">
+                                                    <ul>
+                                                        <li><i class="fa fa-eye"></i><span>350</span></li>
+                                                        <li><i class="fa fa-star-o"></i><span>20</span></li>
+                                                        <li><i class="fa fa-comment-o"></i><span>15</span></li>
+                                                        <li><i class="fa fa-thumbs-o-up"></i><span>521</span></li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-xs-3">
+                                       <div class="thumbnail">
+                                            <div class="clone"><i class="fa fa-copy"></i></div>
+                                            <div class="delete"><i class="fa fa-trash"></i></div>
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTgiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMTk4IiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijk5IiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNhYWE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTNweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTh4MjAwPC90ZXh0Pjwvc3ZnPg==" alt="100%x200" style="width: 100%; height: 200px; display: block;" data-src="../assets/global/plugins/holder.js/100%x200">
+                                            <div class="caption">
+                                                <h5>Thumbnail label
+                                                    <i class="fa fa-info-circle"></i>
+                                                    <i class="fa fa-tag"></i>
+                                                </h3>
+                                                <p> 作者：<b>Wesson Charles</b> </p>
+                                                <div class="thumbfoot">
+                                                    <ul>
+                                                        <li><i class="fa fa-eye"></i><span>350</span></li>
+                                                        <li><i class="fa fa-star-o"></i><span>20</span></li>
+                                                        <li><i class="fa fa-comment-o"></i><span>15</span></li>
+                                                        <li><i class="fa fa-thumbs-o-up"></i><span>521</span></li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+
+                                   
+                               </div>
+                               <div class="clearfix"> </div>
+                            </div>
+                            <div class="tab-pane" id="tab2">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $("[data-hover='dropdown']").dropdownHover();
+            $("[data-toggle='ws-tab'] .btn").click(function(){
+                $(this).parents("[data-toggle='ws-tab']").find(".active").removeClass('active');
+                $(this).addClass("active");
+            })
+            $(".tags label").click(function(){
+                $(this).toggleClass("active");
+            })
+            $("#top-carousel").carousel();
+            $("#bigtab").tab();
+        </script>
+        <!-- BEGIN CORE PLUGINS -->
+        <!--<script src="lib/require.js" data-main="scripts/main"></script>-->
+    </body>
+
+</html>

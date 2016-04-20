@@ -1,0 +1,215 @@
+/*header*/
+.page-header{
+	position: fixed;
+	left:0;
+	top:0;
+	right: 0;
+	width:100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    height: 46px;
+    min-height: 46px;
+    filter: none;
+    background-image: none;
+    background-color: #2b3643;
+    z-index: 2000;
+}
+.page-header .page-logo{
+	float: left;
+    display: block;
+    width: 235px;
+    height: 46px;
+}
+.page-header .page-logo h1{
+	font-size: 2em;
+    color: #c6cfda;
+    text-align: center;
+    margin: 0;
+    line-height: 46px;
+}
+.page-header .center-menu ul{
+	list-style: none;
+	margin:0;
+	padding: 0;
+}
+.page-header .center-menu ul>li{
+	float:left;
+	height:46px;
+}
+.page-header .center-menu ul>li>a{
+	padding:0 18px;
+	line-height: 46px;
+	font-size: 1em;
+	color:#79869a;
+	text-decoration: none;
+}
+.page-header .center-menu ul>li:hover>a,.page-header .center-menu ul>li.selected>a{
+	color:#c6cfda;
+}
+.page-header .center-menu ul>li.selected{
+	background-color: #3f4f6a;
+}
+.page-header .top-menu {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+.page-header .top-menu .input-group{
+	width: 200px;
+    float: left;
+    padding: 8px 0;
+}
+.dropdown-user{
+	padding:0 6px 0 8px;
+	float:right;
+}
+.dropdown-user a{
+	line-height: 46px;
+	text-decoration: none;
+}
+/*container*/
+.page-container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+	margin-top:46px;
+}
+.page-content-wrapper{
+	float:left;
+	width:100%;
+}
+.page-container .page-sidebar{
+	background-color: #364150;
+	color:#b4bcc8;
+    width: 235px;
+    float: left;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    top: 46px;
+}
+.page-container .page-sidebar h4{
+	color:#708096;
+}
+.page-container .page-content {
+	background-color:#fff;
+    margin-left: 235px;
+    margin-top: 0;
+    min-height: 600px;
+    padding: 25px 20px 10px;
+}
+.clearfix{
+	clear: both;
+}
+/*overwrite bootstrap*/
+.portlet{
+	padding:10px;
+}
+.form-control{
+	height:30px;
+}
+.dropdown-right{
+	right:0;
+	left:auto;
+}
+.btn-group>.dropdown-menu.dropdown-right:before,
+.dropdown-toggle>.dropdown-menu.dropdown-right:before,
+.dropdown>.dropdown-menu.dropdown-right:before{
+	position: absolute;
+    top: -8px;
+    right: 9px;
+    left: auto;
+    display: inline-block!important;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #e0e0e0;
+    border-left: 8px solid transparent;
+    content: '';
+}
+.btn-group>.dropdown-menu.dropdown-right:after,
+.dropdown-toggle>.dropdown-menu.dropdown-right:after,
+.dropdown>.dropdown-menu.dropdown-right:after{
+	position: absolute;
+    top: -7px;
+    right: 10px;
+    left: auto;
+    display: inline-block!important;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    border-left: 7px solid transparent;
+    content: '';
+}
+[data-toggle="ws-tab"] .btn{
+	padding: 2px 12px;
+	color:#b4bcc8;
+	border:none;
+	background-color: transparent;
+}
+[data-toggle="ws-tab"] .btn:not(.active):hover{
+	background-color:#3e4b5c!important
+}
+[data-toggle="ws-tab"] .btn.active{
+	background-color: #36c6d3;
+	color:#fff;
+}
+[data-toggle="ws-tab"] .btn input[type='radio']{
+	display: none;
+}
+[data-toggle="ws-tab"] .btn:not(:first-child):not(:last-child){
+	border-left:1px solid #435060;
+	border-right:1px solid #435060;
+}
+[data-toggle="ws-tab"] .btn:first-child{
+	border-right:1px solid #435060;
+}
+[data-toggle="ws-tab"] .btn:last-child{
+	border-left:1px solid #435060;
+}
+.bigtab{
+	border:1px solid #e7ecf1!important;
+	text-align: center;
+}
+.bigtab .nav-tabs{
+	display: inline-block;
+	margin-bottom:-5px;
+}
+.tags label{
+	margin:2px 5px;
+	cursor: pointer;
+	padding:0px 5px;
+	text-decoration: underline;
+}
+.tags label.active{
+	color:#36c6d3;
+	text-decoration: none;
+}
+.thumbnail{
+	position: relative;
+}
+.thumbnail .clone,.thumbnail .delete{
+	position: absolute;
+	top: 15px;
+	font-size: 1.5em;
+}
+.thumbnail .clone{
+	left:15px;
+}
+.thumbnail .delete{
+	right:15px;
+}
+.thumbnail .thumbfoot {
+    margin: 0 -15px -15px -15px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    padding: 0 10px;
+}
+.thumbfoot ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.thumbfoot ul li{
+    float:left;
+    margin:5px;
+}
+
