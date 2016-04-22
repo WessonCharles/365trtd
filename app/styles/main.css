@@ -1,3 +1,13 @@
+ @font-face {
+	font-family: 'fzlt';
+	src: url('fzlt.eot?') format('eot');/*IE*/
+	src:url('ftlt.woff') format('woff'), url('ftlt.ttf') format('truetype');/*non-IE*/
+	font-weight: normal;
+	  font-style: normal;
+}
+html,body,.label, body, h1, h2, h3, h4, h5, h6{
+	font-family:"Microsoft JhengHei",'fzlt',arial;
+}
 /*header*/
 .page-header{
 	position: fixed;
@@ -20,6 +30,9 @@
     display: block;
     width: 235px;
     height: 46px;
+    -webkit-transition: all .2s ease-in-out;
+         -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
 }
 .page-header .page-logo h1{
 	font-size: 2em;
@@ -88,6 +101,9 @@
     bottom: 0;
     position: fixed;
     top: 46px;
+    -webkit-transition: all .2s ease-in-out;
+         -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
 }
 .page-container .page-sidebar h4{
 	color:#708096;
@@ -98,6 +114,31 @@
     margin-top: 0;
     min-height: 600px;
     padding: 25px 20px 10px;
+    -webkit-transition: all .2s ease-in-out;
+         -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+}
+@media (max-width: 767px) {
+	.page-header .page-logo{
+	    width: 200px;
+	}
+	.page-container .page-sidebar{
+	  width: 200px;
+	}
+	.page-container .page-content{
+		margin-left: 200px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.page-header .page-logo{
+	    width: 200px;
+	}
+  	.page-container .page-sidebar{
+        width: 200px;
+    }
+    .page-container .page-content{
+    	margin-left: 200px;
+    }
 }
 .clearfix{
 	clear: both;
@@ -185,6 +226,11 @@
 }
 .thumbnail{
 	position: relative;
+}
+.thumbnail img{
+	width: 100%!important;
+	height: 100%!important;
+	display: block;
 }
 .thumbnail .clone,.thumbnail .delete{
 	position: absolute;
