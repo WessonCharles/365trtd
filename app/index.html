@@ -19,9 +19,6 @@
         <link rel="stylesheet" href="styles/main.css">
         <link rel="shortcut icon" href="favicon.ico" />
     </head>
-        <script src="libs/jquery/dist/jquery.min.js"></script>
-        <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="scripts/plugin-extends.js"></script>
     <body>
         <div class="page-header">
             <div class="top-menu">
@@ -181,7 +178,7 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="tab1">
                                <div class="col-xs-12">
-                                   <div class="col-xs-3">
+                                   <div class="col-md-3 col-xs-4">
                                        <div class="thumbnail">
                                             <div class="clone"><i class="fa fa-copy"></i></div>
                                             <div class="delete"><i class="fa fa-trash"></i></div>
@@ -205,7 +202,7 @@
                                         </div>
                                    </div>
 
-                                   <div class="col-xs-3">
+                                   <div class="col-md-3 col-xs-4">
                                        <div class="thumbnail">
                                             <div class="clone"><i class="fa fa-copy"></i></div>
                                             <div class="delete"><i class="fa fa-trash"></i></div>
@@ -227,7 +224,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                   </div><div class="col-xs-3">
+                                   </div><div class="col-md-3 col-xs-4">
                                        <div class="thumbnail">
                                             <div class="clone"><i class="fa fa-copy"></i></div>
                                             <div class="delete"><i class="fa fa-trash"></i></div>
@@ -249,7 +246,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                   </div><div class="col-xs-3">
+                                   </div><div class="col-md-3 col-xs-4">
                                        <div class="thumbnail">
                                             <div class="clone"><i class="fa fa-copy"></i></div>
                                             <div class="delete"><i class="fa fa-trash"></i></div>
@@ -271,7 +268,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                   </div><div class="col-xs-3">
+                                   </div><div class="col-md-3 col-xs-4">
                                        <div class="thumbnail">
                                             <div class="clone"><i class="fa fa-copy"></i></div>
                                             <div class="delete"><i class="fa fa-trash"></i></div>
@@ -293,7 +290,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                   </div><div class="col-xs-3">
+                                   </div><div class="col-md-3 col-xs-4">
                                        <div class="thumbnail">
                                             <div class="clone"><i class="fa fa-copy"></i></div>
                                             <div class="delete"><i class="fa fa-trash"></i></div>
@@ -315,7 +312,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                   </div><div class="col-xs-3">
+                                   </div><div class="col-md-3 col-xs-4">
                                        <div class="thumbnail">
                                             <div class="clone"><i class="fa fa-copy"></i></div>
                                             <div class="delete"><i class="fa fa-trash"></i></div>
@@ -337,7 +334,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                   </div><div class="col-xs-3">
+                                   </div><div class="col-md-3 col-xs-4">
                                        <div class="thumbnail">
                                             <div class="clone"><i class="fa fa-copy"></i></div>
                                             <div class="delete"><i class="fa fa-trash"></i></div>
@@ -360,7 +357,7 @@
                                             </div>
                                         </div>
                                    </div>
-                                   <div class="col-xs-3">
+                                   <div class="col-md-3 col-xs-4">
                                        <div class="thumbnail">
                                             <div class="clone"><i class="fa fa-copy"></i></div>
                                             <div class="delete"><i class="fa fa-trash"></i></div>
@@ -396,20 +393,7 @@
                 </div>
             </div>
         </div>
-        <script>
-            $("[data-hover='dropdown']").dropdownHover();
-            $("[data-toggle='ws-tab'] .btn").click(function(){
-                $(this).parents("[data-toggle='ws-tab']").find(".active").removeClass('active');
-                $(this).addClass("active");
-            })
-            $(".tags label").click(function(){
-                $(this).toggleClass("active");
-            })
-            $("#top-carousel").carousel();
-            $("#bigtab").tab();
-        </script>
-        <!-- BEGIN CORE PLUGINS -->
-        <!--<script src="lib/require.js" data-main="scripts/main"></script>-->
+        <script src="libs/require.js" data-main="scripts/main"></script>
     </body>
 
 </html>
