@@ -1,5 +1,6 @@
 var Blog = require("./model").Blog,
 	Action = require(path_root+"/modules/common"),
+	url = require('url'),
 	fs = require("fs"),
 	path = require("path"),
 	util = require("util"),
@@ -8,5 +9,7 @@ var Blog = require("./model").Blog,
 	async = require("async");
 
 exports.renderIndex = function(req,res){
-	res.render("index");
+	var arg = url.parse(req.url);
+	console.log(arg)
+	res.render("index",{pathname:arg.pathname});
 }

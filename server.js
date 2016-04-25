@@ -56,7 +56,6 @@ var env = app.get("env");
 console.log(env)
 //开发环境
 app.engine('.html',ejs.__express);
-app.set('view engine', 'html');
 
 if(env=="development"){
     console.log("开发-----")
@@ -66,17 +65,26 @@ if(env=="development"){
     console.log("线上")
     app.set('views', path.join(__dirname, 'dist'));
 }
+app.set('view engine', 'html');
+
 
 global.path_root = path.join(__dirname,'server');
 global.path_static = path.join(__dirname, 'app');
-console.log(path_root)
 
 app.use(logger('dev'));
 app.use(bodyParser.json());//for parsing application/json
 app.use(bodyParser.urlencoded({ extended: false }));// for parsing application/x-www-form-urlencoded
 app.use(multer({dest:'./uploads/'}));// for parsing multipart/form-data
 app.use(cookieParser());
-//开发环境
+
+
+var app_list = ['common','homepage','logreg','picturedisc'];
+for(var i=0;i<app_list.length;i++){
+    var app_route = require(path_root+'/modules/'+app_list[i]+'/router');
+    app.use("/",app_route) 
+}
+
+// 开发环境
 if(env=="development"){
     app.use(express.static(path.join(__dirname, 'app')));
 }else{
@@ -84,16 +92,7 @@ if(env=="development"){
     app.use(express.static(path.join(__dirname, 'dist')));
 }
 
-app.use(function(req,res,next){
-    console.log("it works")
-    next();
-})
 
-var app_list = ['common','homepage','logreg','picturedisc'];
-for(var i=0;i<app_list.length;i++){
-    var app_route = require(path_root+'/modules/'+app_list[i]+'/router');
-    app.use("/",app_route) 
-}
 
 
 // catch 404 and forward to error handler
@@ -110,23 +109,25 @@ app.use(function(req, res, next) {
 if (app.get('env') === 'development') {
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
+        console.log(err.status)
+        console.log(err.message)
         res.render('error', {
             message: err.message,
             error: err
         });
     });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    console.log(err)
-    res.render('error', {
-        message: err.message,
-        error: {}
+}else{
+    // production error handler
+    // no stacktraces leaked to user
+    app.use(function(err, req, res, next) {
+        res.status(err.status || 500);
+        console.log(err)
+        res.render('error', {
+            message: err.message,
+            error: {}
+        });
     });
-});
+}
 
 
 module.exports = app;

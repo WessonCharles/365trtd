@@ -1,5 +1,5 @@
 var express = require('express');
-var route = express();
+var route = express.Router();
 var index = require('./index');
 
 // middleware specific to this router
@@ -7,8 +7,7 @@ route.use(function timeLog(req, res, next) {
   console.log('Time: ', Date.now());
   next();
 })
-console.log("in")
-console.log(path_static+"/index.html")
+
 route.get("/",index.renderIndex)
 // route.get("/all",index.getall);
 // route.get("/alltags",index.getalltags);
