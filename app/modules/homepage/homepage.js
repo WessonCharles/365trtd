@@ -12,7 +12,7 @@ define(['jquery','bt','colorpicker','bswitch','pe'],function($){
 			$(".tags label").click(function(){
 			    $(this).toggleClass("active");
 			})
-			$("#top-carousel").carousel();
+			$("[data-ride='carousel']").carousel();
 			$("#bigtab").tab();
 			var flag = false;
 			$(".color").click(function(){
@@ -23,11 +23,11 @@ define(['jquery','bt','colorpicker','bswitch','pe'],function($){
 
 			$(".switch").bootstrapSwitch();
 			$("#showfiletab").click(function(){
-				console.log("111")
 				$("#filetab").addClass("filetabshow");
 			});
 			$(document).mousedown(function(event) {
-				if($(event.target).parents("#filetab").length==0){
+				console.log($(event.target).parents(".filetabshow"))
+				if(event.which==1&&$(event.target).parents(".filetabshow").length==0){
 					$("#filetab").removeClass("filetabshow");
 				}
 			});

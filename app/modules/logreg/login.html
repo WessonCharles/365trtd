@@ -1,1 +1,216 @@
-casdfsaf
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8" />
+        <title>画盘</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="" name="description" />
+        <meta content=""name="author" />
+        <link href="../libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../styles/components.min.css" rel="stylesheet" type="text/css" />
+        <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+        <link href="../styles/login.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+        	.login{
+        		background-color:#ECEEF1!important; 
+        	}
+			.outcontent {
+			    margin: 40px auto 10px;
+			    position: relative;
+			    width: 810px;
+			}
+			.outcontent .content{
+				float: left;
+			    margin: 0px;
+			    width: 350px;
+			    height:450px;
+			    background-color: #fff;
+			    -webkit-transform: translateX(0) translateY(0%);
+			    -moz-transform: translateX(0) translateY(0%);
+			    -ms-transform: translateX(0) translateY(0%);
+			    transform: translateX(0) translateY(0%);
+			}
+			.content a{
+				text-decoration:underline;
+			}
+			#login-carousel{
+				float: left;
+			    height: 450px;
+			    width: 450px;
+			    -webkit-transform: translateX(0) translateY(0%);
+			    -moz-transform: translateX(0) translateY(0%);
+			    -ms-transform: translateX(0) translateY(0%);
+			    transform: translateX(0) translateY(0%);
+			}
+			.fa-lock{
+				width: 14px;
+			}
+			.checker{
+				float: left;
+			}
+			.logo{
+				margin-top: 0!important;
+				padding: 0!important;
+			}
+			.social-icons li{
+				text-indent:0;
+				font-size: 20px;
+			}
+			.carousel-indicators,.carousel-control{
+				display: none;
+			}
+        </style>
+    </head>
+    <body class="login">
+        
+       <div class="outcontent">
+	        <div class="content">
+		        <div class="logo">
+		        	<h1>圆转天地</h1>
+		        </div>
+	            <!-- BEGIN LOGIN FORM -->
+	            <form class="login-form" novalidate="novalidate" style="display: block;">
+	                <h3 class="form-title font-green">登录</h3>
+	                <div class="input-group">
+	                    <label class="control-label visible-ie8 visible-ie9">用户名</label>
+	                    <span class="input-group-addon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+	                    <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="用户名" name="username"> </div>
+	                <div class="input-group">
+	                    <label class="control-label visible-ie8 visible-ie9">密码</label>
+	                    <span class="input-group-addon">
+	                        <i class="fa fa-lock"></i>
+	                    </span>
+	                    <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="密码" name="password"> </div>
+	                <div class="form-actions">
+	                    <button type="submit" class="btn green uppercase">登录</button>
+	                    <label class="rememberme check">
+	                        <div class="checker"><span><input type="checkbox" name="remember" value="1"></span></div>记住我 </label>
+	                    <a href="javascript:;" id="forget-password" class="forget-password">忘记密码?</a>
+	                </div>
+	                <div class="login-options" style="margin-bottom:10px">
+	                    <h4>第三方登录</h4>
+	                    <ul class="social-icons">
+	                        <li>
+	                            <a class="wechat" style="color:#333;" href="javascript:;"><i class="fa fa-wechat"></i></a>
+	                        </li>
+	                        <li>
+	                            <a class="tecent" style="color:#333;" href="javascript:;"><i class="fa fa-qq"></i></a>
+	                        </li>
+	                    </ul>
+	                </div>
+                    <div>
+                        <a href="javascript:;" id="register-btn" class="uppercase">创建账号</a>
+                    </div>
+	            </form>
+	            <!-- END LOGIN FORM -->
+	            <!-- BEGIN FORGOT PASSWORD FORM -->
+	            <form class="forget-form" novalidate="novalidate" style="display: none;">
+	                <h3 class="font-green">忘记密码 ?</h3>
+	                <div class="input-group">
+	                    <span class="input-group-addon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+	                    <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="邮箱" name="email"> </div>
+	                <div class="form-actions">
+	                    <button type="button" id="back-btn" class="back btn btn-default">返回</button>
+	                    <button type="submit" class="btn btn-success uppercase pull-right">提交</button>
+	                </div>
+	            </form>
+	            <!-- END FORGOT PASSWORD FORM -->
+	            <!-- BEGIN REGISTRATION FORM -->
+	            <form class="register-form" novalidate="novalidate" style="display: none;">
+	                <h3 class="font-green">注册</h3>
+	                <div class="input-group">
+	                    <label class="control-label visible-ie8 visible-ie9">邮箱</label>
+	                    <span class="input-group-addon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+	                    <input class="form-control placeholder-no-fix" type="text" placeholder="邮箱" name="email"> </div>
+	                <div class="input-group">
+	                    <label class="control-label visible-ie8 visible-ie9">密码</label>
+	                    <span class="input-group-addon">
+                            <i class="fa fa-lock"></i>
+                        </span>
+	                    <input class="form-control placeholder-no-fix" type="password" autocomplete="off" id="register_password" placeholder="密码" name="password"> </div>
+	                <div class="input-group">
+	                    <label class="control-label visible-ie8 visible-ie9">重复密码</label>
+	                    <span class="input-group-addon">
+                            <i class="fa fa-lock"></i>
+                        </span>
+	                    <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="重复密码" name="rpassword"> </div>
+	                <div class="form-actions">
+	                    <a type="button" id="register-back-btn" class="back">已有账号登录</a>
+	                    <button type="submit" id="register-submit-btn" class="btn btn-success uppercase pull-right">提交</button>
+	                </div>
+	                <div class="clearfix"></div>
+	            </form>
+	            <!-- END REGISTRATION FORM -->
+	        	<p><a href="" style="float:right;">没有网络？离线使用</a></p>
+	        </div>
+	        <div id="login-carousel" class="carousel slide" data-ride="carousel">
+	          <ol class="carousel-indicators">
+	            <li data-target="#top-carousel" data-slide-to="0" class="active"></li>
+	            <li data-target="#top-carousel" data-slide-to="1"></li>
+	            <li data-target="#top-carousel" data-slide-to="2"></li>
+	          </ol>
+
+	          <div class="carousel-inner" role="listbox">
+	            <div class="item active">
+	              <img style="width:100%;height:450px;" src="images/first.svg" alt="...">
+	              <div class="carousel-caption">
+	                ...
+	              </div>
+	            </div>
+	            <div class="item">
+	              <img style="width:100%;height:450px;" src="images/first.svg" alt="...">
+	              <div class="carousel-caption">
+	                ...
+	              </div>
+	            </div>
+	            <div class="item">
+	              <img style="width:100%;height:450px;" src="images/thrid.svg" alt="...">
+	              <div class="carousel-caption">
+	                ...
+	              </div>
+	            </div>
+	          </div>
+
+	          <a class="left carousel-control" href="#top-carousel" role="button" data-slide="prev">
+	            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	            <span class="sr-only">Previous</span>
+	          </a>
+	          <a class="right carousel-control" href="#top-carousel" role="button" data-slide="next">
+	            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	            <span class="sr-only">Next</span>
+	          </a>
+	        </div>
+       </div>
+        
+    </body>
+    <script src="../libs/jquery/dist/jquery.min.js"></script>
+    <script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+    $("#login-carousel").carousel();
+    $("#forget-password").click(function(){
+    	$(".content form").hide();
+    	$(".forget-form").show();
+    })
+    $("#register-btn").click(function(){
+    	$(".content form").hide();
+    	$(".register-form").show();
+    })
+    $("#register-back-btn,#back-btn").click(function(){
+    	$(".content form").hide();
+    	$(".login-form").show();
+    })
+    </script>
+</html>
