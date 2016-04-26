@@ -24,12 +24,18 @@ require.config({
 	paths:{
 		jquery:'../libs/jquery/dist/jquery.min',
 		bt:'../libs/bootstrap/dist/js/bootstrap.min',
+		cc:'../libs/colorpicker/components-color-picker.min',
+		colorpicker:'../libs/colorpicker/bootstrap-colorpicker',
+		bswitch:'../libs/switch/js/bootstrap-switch.min',
 		pe:'plugin-extends',
 		homepage:'../modules/homepage/homepage',//主页js
 	},
 	shim:{
         'jquery': {'exports': 'jquery'},
         'bt':['jquery'],
+        'cc':['jquery','bt'],
+        'colorpicker':['cc'],
+        'bswitch':['jquery','bt'],
         'pe':['jquery','bt'],
         'homepage':['jquery','bt','pe'],
 	},

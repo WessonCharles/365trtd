@@ -1,0 +1,326 @@
+<div class="container-fluid disc-main page-full-width">
+	<ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#idea" data-toggle="tab"> 思路 </a>
+        </li>
+        <li>
+            <a href="#surface" data-toggle="tab"> 外观 </a>
+        </li>
+        <li class="dropdown">
+            <a href="#view" data-toggle="tab"> 视图 </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="idea">
+        	<div class="page-bar">
+        		<div class="menu-group">
+        			<p><a class="btn"><i class="fa fa-rotate-left"></i>撤销</a></p>
+        			<p><a class="btn"><i class="fa fa-rotate-right"></i>重做</a></p>
+        		</div>
+        		<div class="menu-group">
+        			<p><a class="btn"><i class="fa fa-list-ul"></i>插入下级主题</a></p>
+        			<p><a class="btn"><i class="fa fa-level-down"></i>插入同级主题</a></p>
+        		</div>
+        		<div class="menu-group">
+        			<p><a class="btn"><i class="fa fa-edit"></i>编辑</a></p>
+        			<p><a class="btn"><i class="fa fa-remove"></i>删除</a></p>
+        		</div>
+        		<div class="menu-group">
+        			<div class="dropdown dropdown-user">
+	        			<div class="big dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="fa fa-chain fa-2x"></i>
+							<br><span>链接</span>
+							<br><i class="fa fa-caret-down"></i>
+	        			</div>
+	        			<ul class="dropdown-menu dropdown-menu-default">
+	        				<li><a>插入</a></li>
+	        				<li><a>移除</a></li>
+	        			</ul>
+        			</div>
+        			<div class="dropdown dropdown-user">
+	        			<div class="big dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="fa fa-file-image-o fa-2x"></i>
+							<br><span>图片</span>
+							<br><i class="fa fa-caret-down"></i>
+	        			</div>
+	        			<ul class="dropdown-menu dropdown-menu-default">
+	        				<li><a>插入</a></li>
+	        				<li><a>移除</a></li>
+	        			</ul>
+        			</div>
+        			<div class="dropdown dropdown-user">
+	        			<div class="big dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="fa fa-file-o fa-2x"></i>
+							<br><span>链接</span>
+							<br><i class="fa fa-caret-down"></i>
+	        			</div>
+	        			<ul class="dropdown-menu dropdown-menu-default">
+	        				<li><a>插入</a></li>
+	        				<li><a>移除</a></li>
+	        			</ul>
+        			</div>
+        		</div>
+        		<div class="menu-group">
+        			<div class="big"><i class="fa fa-eraser fa-2x"></i>
+						<br><span>清空节点</span>
+        			</div>
+        			<div class="big"><i class="fa fa-th fa-2x"></i>
+						<br><span>去掉连线</span>
+        			</div>
+        			<div class="big"><i class="fa fa-th fa-2x"></i>
+						<br><span>整理布局</span>
+        			</div>
+        		</div>
+        		<div class="clearfix"></div>
+        	</div>
+        	<div class="full-height-content full-height-content-scrollable"></div>
+        </div>
+        <div class="tab-pane fade" id="surface">
+        	<div class="page-bar">
+        		<div class="menu-group">
+        			<legend>主题</legend>
+        			<div class="dropdown dropdown-user big" >
+	        			<div class="big dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="fa fa-file-image-o fa-2x"></i>
+							<br><span>主题</span>
+							<br><i class="fa fa-caret-down"></i>
+	        			</div>
+	        			<div class="dropdown-menu dropdown-menu-default">
+	        				
+	        			</div>
+        			</div>
+        			<div class="pout">
+	        			<p><a class="btn">属性范围<i class="fa fa-caret-down"></i></a></p>
+	        			<p><a class="btn">界面模式<i class="fa fa-caret-down"></i></a></p>
+	        			<p><a class="btn"  style="float:left">背景颜色</a>
+	        				<div class="input-append color" id="back" data-color="rgb(255, 146, 180)" data-color-format="hex">
+							    <input type="text" class="form-control" value="" >
+							    <span class="add-on"><i style="background-color: rgb(255, 146, 180)"></i></span>
+							</div>
+						</p>
+	    			</div>
+        		</div>
+    			<div class="menu-group">
+    				<legend>文字</legend>
+        			<p><a class="btn">字体<i class="fa fa-caret-down"></i></a><a class="btn">字号<i class="fa fa-caret-down"></i></a></p>
+        			<p><a class="btn"><i class="fa fa-bold"></i></a>
+						<a class="btn"><i class="fa fa-italic"></i></a>
+						<a class="btn"><i class="fa fa-font"></i></a>
+        				<div class="input-append color" id="color" data-color="rgb(255, 146, 180)" data-color-format="hex">
+						    <input type="text" class="form-control" value="" >
+						    <span class="add-on"><i style="background-color: rgb(255, 146, 180)"></i></span>
+						</div>
+        			</p>
+    			</div>
+    			
+    			<div class="menu-group">
+    				<legend>外形</legend>
+    				<p><a class="btn">半径</a><input type="text" class="form-control"/></p>
+    				<p><a class="btn">形状</a><input type="text" class="form-control"/></p>
+    				<p><a class="btn" style="float:left">填充色</a>
+        				<div class="input-append color" id="tianchong" data-color="rgb(255, 146, 180)" data-color-format="hex">
+						    <input type="text" class="form-control" value="" >
+						    <span class="add-on"><i style="background-color: rgb(255, 146, 180)"></i></span>
+						</div>
+    				</p>
+    			</div>
+    			<div class="menu-group">
+    				<legend>边框</legend>
+    				<p><a class="btn">宽度</a><input type="text" class="form-control"/></p>
+    				<p><a class="btn" style="float:left">颜色</a>
+        				<div class="input-append color" id="border" data-color="rgb(255, 146, 180)" data-color-format="hex">
+						    <input type="text" class="form-control" value="" >
+						    <span class="add-on"><i style="background-color: rgb(255, 146, 180)"></i></span>
+						</div>
+    				</p>
+    			</div>
+
+    			<div class="menu-group">
+    				<legend>天盘</legend>
+        			<div class="dropdown dropdown-user big" >
+	        			<div class="big dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="fa fa-file-image-o fa-2x"></i>
+							<br><span>紧凑程度</span>
+							<br><i class="fa fa-caret-down"></i>
+	        			</div>
+	        			<ul class="dropdown-menu dropdown-menu-default">
+	        				<li><a>紧凑</a></li>
+	        				<li><a>稀疏</a></li>
+	        				<li><a>等间距</a></li>
+	        			</ul>
+        			</div>
+        			<div class="pout">
+	        			<p><a class="btn">自动布局</a><input type="checkbox"></p>
+	        			<p><a class="btn">阴影</a><input type="checkbox" /></p>
+	    			</div>
+    			</div>
+
+    			<div class="menu-group">
+    				<legend>布局</legend>
+        			<div class="dropdown dropdown-user big" >
+	        			<div class="big dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="fa fa-file-image-o fa-2x"></i>
+							<br><span>布局方式</span>
+							<br><i class="fa fa-caret-down"></i>
+	        			</div>
+	        			<ul class="dropdown-menu dropdown-menu-default">
+	        				<li><a>外圈均分</a></li>
+	        				<li><a>内圈均分</a></li>
+	        				<li><a>指定层均分</a><input type="text" class="form-control"></li>
+	        			</ul>
+        			</div>
+        			<div class="pout">
+	        			<div class="dropdown dropdown-user" >
+		        			<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+								文字方向<i class="fa fa-caret-down"></i>
+		        			</a>
+		        			<ul class="dropdown-menu dropdown-menu-default">
+		        				<li><a>放射</a></li>
+		        				<li><a>旋转</a></li>
+		        				<li><a>正向</a></li>
+		        			</ul>
+	        			</div>
+	        			<p><a class="btn">扇形宽度</a><input type="checkbox" /></p>
+	    			</div>
+    			</div>
+        		<div class="clearfix"></div>
+        	</div>
+        	<div class="full-height-content full-height-content-scrollable"></div>
+        </div>
+        <div class="tab-pane fade" id="view">
+        	<div class="page-bar">
+    			<div class="menu-group">
+        			<div class="dropdown dropdown-user" >
+	        			<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+							展开<i class="fa fa-caret-down"></i>
+	        			</a>
+	        			<ul class="dropdown-menu dropdown-menu-default">
+	        				<li><a>第一层</a></li>
+	        				<li><a>第二层</a></li>
+	        				<li><a>第三层</a></li>
+	        				<li><a>第四层</a></li>
+	        				<li><a>第五层</a></li>
+	        			</ul>
+        			</div>
+    			</div>
+    			<div class="menu-group">
+        			<div class="dropdown dropdown-user" style="float:left;">
+	        			<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+							定位节点<i class="fa fa-caret-down"></i>
+	        			</a>
+	        			<ul class="dropdown-menu dropdown-menu-default">
+	        				<li><a>根节点</a></li>
+	        				<li><a>当前节点</a></li>
+	        			</ul>
+        			</div>
+        			<div class="big">
+	        			<div class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="fa fa-file-image-o fa-2x"></i>
+							<br><span>显示所有节点</span>
+	        			</div>
+        			</div>
+    			</div>
+        		<div class="clearfix"></div>
+        	</div>
+        	<div class="full-height-content full-height-content-scrollable"></div>
+        </div>
+    </div>
+</div>
+<div class="sidefile">
+	<div id="filetab">
+		<div class="row">
+			<div class="col-md-2 col-sm-2 col-xs-2">
+				<ul class="nav nav-tabs tabs-left">
+	                <li>
+	                    <a href="/" class="btn btn-primary"> 返回 </a>
+	                </li>
+	                <li class="active">
+	                    <a href="#create" data-toggle="tab"> 新建 </a>
+	                </li>
+	                <li>
+	                    <a href="#open" data-toggle="tab"> 打开 </a>
+	                </li>
+	                <li>
+	                    <a href="#save_as" data-toggle="tab"> 另存为 </a>
+	                </li>
+	                <li>
+	                    <a href="#help" data-toggle="tab"> 帮助 </a>
+	                </li>
+	                <li>
+	                    <a href="#recive" data-toggle="tab"> 反馈 </a>
+	                </li>
+	                <li>
+	                    <a href="#share" data-toggle="tab"> 分享 </a>
+	                </li>
+	            </ul>
+			</div>
+			<div class="col-md-10 col-sm-10 col-xs-10">
+				<div class="tab-content">
+					<div class="tab-pane active" id="create">
+						<h1>新建</h1>
+						<div class="menu-group">
+							<div class="big"><i class="fa fa-life-ring fa-2x"></i>
+								<br><span>天盘</span>
+		        			</div>
+							<div class="big"><i class="fa fa-globe fa-2x"></i>
+								<br><span>地盘</span>
+		        			</div>
+						</div>
+						<div class="clearfix"></div>
+						<legend>常用模板</legend>
+						<div class="recently-file">
+							<%for(var i=0;i<15;i++){%>
+								<img src="../images/avator.png" alt="">
+							<%}%>
+							<div class="more">
+								<a href="">更多模板·</a>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="open">
+						<h1>打开</h1>
+						<legend>最近使用的文件</legend>
+						<div class="recently-file">
+							<%for(var i=0;i<15;i++){%>
+								<img src="../images/avator.png" alt="">
+							<%}%>
+						</div>
+
+						<ul class="list-group">
+	                        <li class="list-group-item"> <a href="">转到我的文档</a>
+	                            <!-- <span class="badge badge-default"> 3 </span> -->
+	                        </li>
+	                        <li class="list-group-item"><a href="">打开本地文件</a>
+	                        </li>
+	                        <li class="list-group-item"><a href="">导入大纲文本</a>
+	                        </li>
+	                    </ul>  
+					</div>
+					<div class="tab-pane" id="save_as">
+						<h1>另存为</h1>
+						<ul class="list-group">
+	                        <li class="list-group-item"> <a href="">另存为副本</a>
+	                            <!-- <span class="badge badge-default"> 3 </span> -->
+	                        </li>
+	                        <li class="list-group-item"><a href="">导出数据</a>
+	                        </li>
+	                        <li class="list-group-item"><a href="">导出大纲文本</a>
+	                        </li>
+	                        <li class="list-group-item"><a href="">导出图片</a>
+	                        </li>
+	                        <li class="list-group-item"><a href="">另存为天盘/地盘</a>
+	                        </li>
+	                    </ul> 
+					</div>
+					<div class="tab-pane" id="help"></div>
+					<div class="tab-pane" id="recive"></div>
+					<div class="tab-pane" id="share">
+						<h1>分享</h1>
+						<div>
+							<div class="form-group" style="height:45px;">
+                                <label class="col-md-3 control-label" style="margin-top:10px;">图片地址：</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control input-inline input-medium" placeholder="http://">
+                                    <span class="help-inline"> <button class="btn btn-green">复制</button> </span>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
