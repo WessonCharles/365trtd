@@ -2,7 +2,7 @@
 
 ##目录结构
 
-365trtd
+```
 ├─app
 │  ├─images
 │  ├─libs
@@ -26,6 +26,7 @@
 │      ├─logreg
 │      └─picturedisc
 └─uploads
+```
 
 *:app下为前端文件
 *:server下为后端路由，数据库模板schema,以及restful
